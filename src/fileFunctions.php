@@ -14,3 +14,8 @@ function getExpenses() {
     $data = file_get_contents(FILE_PATH);
     return json_decode($data, true);
 }
+
+function saveExpense($expense){
+    $jsonData = json_encode($expense, JSON_PRETTY_PRINT);
+    file_put_contents(FILE_PATH, $jsonData);
+}
