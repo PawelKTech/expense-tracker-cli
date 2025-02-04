@@ -39,6 +39,9 @@ $commands = [
     },
     "add" => function() use ($description, $option , $description2, $option2){
         addExpense((float) $option2,$option);
+    },
+    "delete" => function() use ($description, $option){
+        deleteExpense($option);
     }
 ];
 

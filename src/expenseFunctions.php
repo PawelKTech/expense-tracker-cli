@@ -49,3 +49,16 @@ function addExpense($amount, $description){
     saveExpense($expensses);
     echo "Expense added successfully.\n";
 }
+
+function deleteExpense($id){
+    $expensses = getExpenses();
+    $index = array_search($id, array_column($expensses, 'id'));
+    if($index === false){
+        echo "Expense with ID $id not found.\n";
+        return;
+    }
+    array_splice($expensses, $index, 1);
+    saveExpense($expensses);
+    echo "Expense deleted successfully.\n";
+    loadEpneses($expensses); 
+}
