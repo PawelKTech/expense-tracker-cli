@@ -23,25 +23,25 @@ if($argc < 2){
 }
 
 $command = $argv[1];
-$description = isset($argv[2]) ? $argv[2] : null;
-$option = isset($argv[3]) ? $argv[3] : null;
-$description2 = isset($argv[4]) ? $argv[4] : null;
-$option2 = isset($argv[5]) ? $argv[5] : null;
-
+$desc1 = $argv[2] ?? null;
+$opt1 = $argv[3] ?? null;
+$desc2 = $argv[4] ?? null;
+$opt2 = $argv[5] ?? null;
+$lengthofargv = $argc;
 
 //need to add checking data before function
 $commands = [
-    "list" => function() use ($description, $option){
+    "list" => function() use ($desc1, $opt1){
         loadEpneses();
     },
     "summary" => function(){
         summary();
     },
-    "add" => function() use ($description, $option , $description2, $option2){
-        addExpense((float) $option2,$option);
+    "add" => function() use ($opt1 , $opt2){
+        addExpense((float) $opt2,$opti1);
     },
-    "delete" => function() use ($description, $option){
-        deleteExpense($option);
+    "delete" => function() use ( $opt1){
+        deleteExpense($opt1);
     }
 ];
 

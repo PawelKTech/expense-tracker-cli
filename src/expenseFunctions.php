@@ -21,6 +21,18 @@ function loadEpneses() {
     print_r($expensses);
 }
 
+// function loadDateExpenses() {
+//     $expensses = checkexspenses();
+//     foreach($expensses as $exp){
+//         $date = $exp['date'];
+
+//         $month = substr($exp, 5 ,2 );
+//         if($month == "02"){
+//             echo "Miesiąc: " . $month . "\n";
+//         }
+//     }
+// }
+
 function summary(){
     checkexspenses();
     $total = 0;

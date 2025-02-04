@@ -6,15 +6,27 @@
         "date": "2025-02-04"
     },
     {
-        "id": 2,
+        "id": 3,
         "description": "Lunch",
         "amount": 10,
         "date": "2025-02-04"
     },
     {
-        "id": 3,
+        "id": 4,
         "description": "Lunch",
-        "amount": 10,
+        "amount": 20,
+        "date": "2025-02-04"
+    },
+    {
+        "id": 5,
+        "description": "Dinner",
+        "amount": 20,
+        "date": "2025-02-04"
+    },
+    {
+        "id": 6,
+        "description": "Dinner",
+        "amount": 20,
         "date": "2025-02-04"
     }
 ]
