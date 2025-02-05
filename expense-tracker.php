@@ -1,5 +1,4 @@
 <?php
-
 require_once "src/fileFunctions.php";
 require_once "src/expenseFunctions.php";
 
