@@ -9,12 +9,11 @@ Inspiration from: https://roadmap.sh/projects/expense-tracker
 
 - **Add Expense**: Record new expenses with details like amount, category, and description.
 - **View Expenses**: View a list of all recorded expenses.
-- **Update Expense**: Edit existing expenses to correct or adjust details.
 - **Delete Expense**: Remove an expense from your list.
+- **Filter by Month**: Filter expenses by the specified month.
 - **Persistent Storage**: All data is saved in a local JSON file.
-- **Filter and Sort**: Sort expenses by date or amount and filter by category.
+- **Sort Expenses**: Sort expenses by date or amount.
 - **User-Friendly CLI**: Simple command-line interface for managing your expenses.
-- **Cross-Platform**: Works on Linux, macOS, and Windows with PHP installed.
 
 
 ## The list of commands and their usage:
