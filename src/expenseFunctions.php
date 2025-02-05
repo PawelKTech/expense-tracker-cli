@@ -15,10 +15,12 @@ function checkexspenses(){
 
 function loadEpneses() {
     $expensses = checkexspenses();
+    echo "#    ID      Date        Description   Amount\n";
     foreach($expensses as $exp){
-        echo "ID: ". $exp['id']. ", Amount: ". $exp['amount']. ", Description: ". $exp['description']. " Date: " . $exp['date']. "\n";
+        $formattedAmount = '$' . number_format($exp['amount'], 2);
+        echo sprintf("%-4s %-7s %-15s %-12s %s\n", '#', $exp['id'], $exp['date'], $exp['description'], $formattedAmount);
+
     }
-    print_r($expensses);
 }
 
 function summaryMonthExpenses($userMonth) {

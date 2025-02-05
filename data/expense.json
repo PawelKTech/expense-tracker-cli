@@ -28,5 +28,11 @@
         "description": "Dinner",
         "amount": 20,
         "date": "2025-08-04"
+    },
+    {
+        "id": 8,
+        "description": "Going out",
+        "amount": 12.5,
+        "date": "2025-02-05"
     }
 ]
