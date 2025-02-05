@@ -21,17 +21,22 @@ function loadEpneses() {
     print_r($expensses);
 }
 
-// function loadDateExpenses() {
-//     $expensses = checkexspenses();
-//     foreach($expensses as $exp){
-//         $date = $exp['date'];
+function summaryMonthExpenses($userMonth) {
+    $expensses = checkexspenses();
+    $total = 0;
 
-//         $month = substr($exp, 5 ,2 );
-//         if($month == "02"){
-//             echo "Miesiąc: " . $month . "\n";
-//         }
-//     }
-// }
+    foreach($expensses as $exp){
+        $dateObj = new DateTime($exp['date']);
+        $month = $dateObj->format('m');
+        if(str_pad($userMonth, 2, "0", STR_PAD_LEFT) == $month){
+            $total += $exp['amount'];
+        }
+    }
+    $month = intval(str_pad($userMonth, 2, "0", STR_PAD_LEFT));
+    $monthName = date('F', mktime(0,0,0, $month,1));
+
+    echo "Total expenses for month {$monthName}: $total. \n";
+}
 
 function summary(){
     checkexspenses();
